@@ -1,0 +1,58 @@
+.preloader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #545050;
+}
+
+.preloader-chasing-squares {
+  width: 50px;
+  height: 50px;
+  line-height: 19px;
+}
+
+.preloader-chasing-squares .square {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  background: #fff;
+  animation: focusfade 2.8s infinite;
+}
+
+.preloader-chasing-squares .square:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.preloader-chasing-squares .square:nth-child(3) {
+  animation-delay: 2.1s;
+}
+
+.preloader-chasing-squares .square:nth-child(4) {
+  animation-delay: 1.4s;
+}
+
+@keyframes focusfade {
+
+  0% {
+    opacity: 0.7;
+  }
+
+  30% {
+    opacity: 0.7;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.7;
+  }
+}
