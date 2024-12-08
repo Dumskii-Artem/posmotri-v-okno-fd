@@ -10,6 +10,7 @@ html {
 
 .page {
   display:flex;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -48,28 +49,17 @@ ol {
   width: 1px;
 }
 
-.page {
-  display: flex;
-  width: 1200px;
-  height: 100%;
-}
-
-
-
 .content {
   display: grid;
   
   grid-template-columns: 711px 399px;
- /* grid-template-rows: 240px 350px;*/
   grid-template-areas:
   'result content__details';
   height: 534px;
 
   gap: 30px;
   width: 100%;
-
-  /*display: flex;
-  position: relative;*/
+  margin: 0 30px;
 }
 
 .result {}
