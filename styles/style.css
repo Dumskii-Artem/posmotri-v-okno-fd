@@ -36,3 +36,265 @@ ul,
 ol {
   list-style: none;
 }
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.page {
+  display: flex;
+  width: 1200px;
+  height: 100%;
+}
+
+
+
+.content {
+  display: grid;
+  
+  grid-template-columns: 711px 399px;
+ /* grid-template-rows: 240px 350px;*/
+  grid-template-areas:
+  'result content__details';
+  height: 534px;
+
+  gap: 30px;
+  width: 100%;
+
+  /*display: flex;
+  position: relative;*/
+}
+
+.result {}
+.result__video-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding-top: 60px;
+}
+
+.result__video {
+  position: relative;
+  width: 100%;
+}
+
+.search-form {
+  display: inline-flex;
+  width: 100%;
+  align-items: stretch;
+  gap: 19px;
+  margin-top: 20px;
+  justify-content: space-between;
+
+
+}
+.search-form__fieldset {
+/*  display:flex;
+  flex-direction: column;
+  inline-size: 100%;*/
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  color:#fff;
+  line-height: 21.6px;
+
+  align-content: center;
+  border:none;
+ /* padding-left: 20px;*/
+}
+
+.search-form__fieldset-title {}
+.search-form__label {
+  display: flex;
+}
+.search-form__label-text {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color:#fff;
+  margin: 0px 10px;
+}
+/*
+.search-form__label-text:nth-of-type(3) {
+  margin-right: 0px;
+}*/
+
+.search-form__textfield {
+  width:220px;
+  appearance: none;
+}
+
+/*
+.search-form__textfield:focus {
+  outline: 5px solid pink;
+}*/
+
+
+
+.search-form__checkbox {
+ /* display: inline-flex;*/
+}
+.search-form__checkbox-list {
+  display: flex;
+/*  width:212px;*/
+  width: fit-content;
+  gap: 5px;
+
+  /*display:flex;
+gap: 15px;*/
+}
+
+/*
+search-form__label .checkbox:nth-of-type(2) {
+  padding-left: 20px; 
+}*/
+
+.search-form__pseudo-checkbox {
+  display: block;
+  border: 1px solid #fff;
+  width: 19px;
+  height: 19px;
+}
+
+/*.search-form__pseudo-checkbox::after*/
+.search-form__checkbox:checked + span {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  margin: 1px 0 0 1px;
+}
+
+.content__details {}
+
+.title {
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  color:#fff;
+  line-height: 70.5px;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color:#aaa;
+}
+.content__list {
+  position: relative;
+  height: 302px;
+  overflow: auto;
+  margin-top: 20px;
+}
+.content__list::-webkit-scrollbar {
+  display: none;
+}
+
+.content__video-card {
+  display: inline-flex;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.content__video-card-title {
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  color:#fff;
+  text-transform: uppercase; 
+  width: 100%;
+}
+
+.content__video-card-description {
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color:#fff;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  margin-left: auto;
+}
+
+.button {
+  margin-top: 20px;
+  border: 1px solid #aaa;
+  height: 34px;
+  cursor: pointer;
+  background-color: transparent;
+  text-align: center;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color:#fff;
+
+}
+
+.search-form__submit-button {
+  width: 194px;
+}
+
+.more-button {
+  width: 100%;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #aaa;
+}
+
+.button:focus {
+ outline:none; 
+}
+
+.content__card-link {
+  display: block;
+}
+
+.search-form__checkbox-list label:hover {
+  cursor: pointer;
+  text-decoration: underline; 
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #aaa;
+  outline-offset: 1px;
+  text-decoration: underline; 
+}
+
+.search-form__textfield:active {
+  outline: 1px solid #aaa;
+}
+
+.search-form__textfield:hover {
+}
+
+.content__card-link:hover {
+  text-decoration: underline; 
+}
+
+.content__card-link:active {
+  background-color: #aaa;
+}
+
+.content__card-link::focus-visible {
+  outline: 1px solid #aaa;
+  margin: 2px;
+}
+
