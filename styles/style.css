@@ -88,30 +88,34 @@ ol {
   display: inline-flex;
   width: 100%;
   align-items: stretch;
-  gap: 19px;
+/*  gap: 19px;*/
   margin-top: 20px;
   justify-content: space-between;
 
 
 }
-.search-form__fieldset {
-/*  display:flex;
-  flex-direction: column;
-  inline-size: 100%;*/
+
+.search-form__fieldset-title {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
-  font-size: 10px;
+  font-size: 18px;
   color:#fff;
-  line-height: 21.6px;
+  line-height: 30px;
+}
+
+.search-form__fieldset {
+
 
   align-content: center;
   border:none;
- /* padding-left: 20px;*/
 }
 
-.search-form__fieldset-title {}
 .search-form__label {
   display: flex;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color:#fff;
 }
 .search-form__label-text {
   font-family: 'Fira Sans Condensed', sans-serif;
