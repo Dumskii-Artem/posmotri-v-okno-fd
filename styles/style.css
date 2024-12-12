@@ -47,7 +47,9 @@ ol {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+  border: none;
 }
+
 
 .content {
   display: flex;
@@ -56,14 +58,19 @@ ol {
   margin: 0 30px;
 }
 
+.content__details {
+  height: 534px;
+}
+
 .result {
   align-self: flex-end;
 }
 
 .result__video-container {
   position: relative;
-  width: 711px;
+  width: 100%;
   height: 386px;
+  margin-bottom: 16px;
 }
 
 .result__video {
@@ -74,55 +81,32 @@ ol {
   object-position: center;
 }
 
+.search-form__fieldset {
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+  width: fit-content;
+}
+
 .search-form {
   display:flex;
   align-items: center;
-/*  gap: 26px;*/
- /* display: inline-flex;*/
   width: 100%;
-  /*align-items: stretch;*/
   margin-top: 14px;
-/*  justify-content: space-between;*/
+  justify-content: space-between;
+  height:54px;
 }
 
 .search-form__fieldset:nth-child(2){
   margin-left: 44px;
 }
 
-
-
-
 .search-form__fieldset-title {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
   color:#fff;
- line-height: 30px;
- /*background: rgb(6, 93, 93);*/
-}
-
-
-.search-form__checkbox-list {
-  display: flex;
-  width: fit-content;
- /* gap: 5px;*/
-}
-
-.search-form__pseudo-checkbox {
-  display: block;
-  border: 1px solid #fff;
-  width: 19px;
-  height: 19px;
-  margin-top: 1px;
-}
-
-.search-form__checkbox:checked + span {
-  content: '';
-  display: block;
-  width: 15px;
-  height: 15px;
-  background-color: #fff;
-  margin: 4px 2px;
+  width: 225px;
 }
 
 .title {
@@ -140,9 +124,10 @@ ol {
 
 .content__list {
   position: relative;
-  height: 302px;
+  height: 298px;
   overflow: auto;
-  margin-top: 20px;
+  margin-top: 23px;
+  overflow-x: hidden;
 }
 
 .content__video-card {
@@ -156,8 +141,8 @@ ol {
   font-size: 30px;
   line-height: 30px;
   color:#fff;
-  text-transform: uppercase; 
-  width: 100%;
+  text-transform: uppercase;
+  max-width: 200px;
 
   /*На случай увеличения количества текста нужно добавить связку 
   и ограничить максимальную ширину заголовка  
@@ -165,7 +150,6 @@ ol {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-
 }
 
 .content__video-card-description {
@@ -184,8 +168,7 @@ ol {
 }
 
 .button {
-  margin-top: 20px;
-  border: 1px solid #545050;
+  border: 1px solid #fff;
   height: 34px;
   cursor: pointer;
   background-color: transparent;
@@ -198,14 +181,14 @@ ol {
 
 .search-form__submit-button {
   width: 194px;
-  margin-top: 25px;
-  padding-top: 2px;
-  margin-left: 27px;
-  padding-bottom: 7px;
+  margin-top: 20px;
+  margin-left: 36px;
+  text-align: center;
 }
 
 .more-button {
-  width: 100%;
+  width: 399px;
+  height: 33px;
 }
 
 .button:hover {
@@ -221,49 +204,61 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid #545050;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.content__list-item { 
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.content__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.search-form__pseudo-checkbox {
+  display: block;
+  border: 1px solid #fff;
+  width: 19px;
+  height: 19px;
+  margin-top: 1px;
 }
 
 
-
+.search-form__checkbox-list {
+  display: flex;
+  width: fit-content;
+  gap: 12px;
+}
 
 .search-form__checkbox-list label:hover {
   cursor: pointer;
   text-decoration: underline; 
 }
 
-
-
-
-
-
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  content: '';
+  display: block;
+  position: relative; 
+  top: 1px;
+  left: 1px;
+  width:15px;
+  height: 15px;
+  text-align: center;
+  background-color: #fff;
+}
 
 .search-form__textfield:focus {
   outline: none;
 }
-
 
 .search-form__textfield:active {
  outline: 2px solid #fff;
 }
 
 .search-form__fieldset {
-  align-content: center;
   border:none;
-  height: 60px;
-}
-
-.search-form__label:has(:focus-visible) {
-  outline: 2px solid #545050;
-  outline-offset: 1px;
-}
-/*
-.search-form__label:has(:focus) {
-  outline: none;
-}*/
-
-.search-form__label-text:focus {
-  outline: none;
 }
 
 .search-form__label {
@@ -272,47 +267,71 @@ ol {
   font-weight: 400;
   font-size: 18px;
   color:#fff;
-  height: 30px;
-}
-.search-form__label-text {
-  margin: 0 15px 8px 5px;
+  align-self: flex-start;
 }
 
+.search-form__label-text {
+  margin: 0 3px 8px 6px;
+}
+
+
+.search-form__label-text:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) { 
+  outline: 1px solid #fff; 
+  outline-offset: 1px; 
+} 
+
 .search-form__textfield {
-  width:220px;
+  width:225px;
   appearance: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   border-left: none;
   border-right: none;
   padding: 2px 0;
-  background-color: transparent;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
-  font-size: 18px;  
-  height: 28px;
-  padding-bottom: 3px;
+  font-size: 18px;
+  color: inherit;
+  background-color: inherit;  
+}
+
+.search-form__label:has(.search-form__pseudo-checkbox) {
+  height: 21px;
+}
+
+.search-form__label:has(.search-form__pseudo-checkbox):focus-visible {
+  outline: 1px solid #fff; 
+  outline-offset: 1px;
 }
 
 /*выделение первой или активной карты */
-.content__card-link_current {
-  outline: 1px solid #fff;
+.content__card-link_current article {
+  background-color: #545050;
 }
-
-
-.content__list-item { 
-  margin: 2px 2px 39px 2px;
-}
-
-.content__list-item:last-child {
-  margin: 2px 2px 2px 2px;
-}
-
 
 .content__card-link:hover:not(:active) p {
   text-decoration: underline;
 }
 
+
+/* 
+Вы написали :
+При наведении подчеркивание у заголовка не появляется. 
+Я не вижу, где нет подчеркивания, наставник не может мне ничего похожего сказать.
+
+он мне ответил так:
+Ты немного усложняешь, нужно задать стили для :active, и нужно задать стили для :hover,
+ а то что они в какой-то момент пересекаются — мы нажимаем на карточку (:active) но и 
+ :hover при этом работаем так как мышка над ссылкой — это не проблема и ее решать не нужно
+
+ очень неудобно, что у Вас нельзя спросить ничего.
+
+ немного я подправил, но не здесь и не подчеркивание
+*/
 .content__card-link:hover:not(:active) h2 {
   text-decoration: underline;
 }
