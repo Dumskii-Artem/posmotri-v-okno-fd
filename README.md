@@ -1,1 +1,1 @@
-https://github.com/Dumskii-Artem/posmotri_v_okno-fd
+https://github.com/Dumskii-Artem/posmotri-v-okno-fd
