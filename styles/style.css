@@ -50,7 +50,6 @@ ol {
   border: none;
 }
 
-
 .content {
   display: flex;
   inline-size: 100%;
@@ -161,22 +160,9 @@ ol {
 
 .content__video-card-thumbnail {
   width: 194px;
- /* height: 103px;*/
   margin-left: auto;
   object-fit: contain;
   object-position: center;
-}
-
-.button {
-  border: 1px solid #fff;
-  height: 34px;
-  cursor: pointer;
-  background-color: transparent;
-  text-align: center;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  color:#fff;
 }
 
 .search-form__submit-button {
@@ -343,4 +329,16 @@ ol {
 .content__card-link:focus-visible article {
   outline: 1px solid #545050;
   margin: 2px;
+}
+
+.button {
+  border: 1px solid #fff;
+  height: 34px;
+  cursor: pointer;
+  background-color: transparent;
+  text-align: center;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color:#fff;
 }
