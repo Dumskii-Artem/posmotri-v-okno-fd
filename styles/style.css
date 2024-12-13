@@ -57,8 +57,16 @@ ol {
   margin: 0 30px;
 }
 
-.content__details {
-  height: 534px;
+.button {
+  border: 1px solid #fff;
+  height: 34px;
+  cursor: pointer;
+  background-color: transparent;
+  text-align: center;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color:#fff;
 }
 
 .result {
@@ -89,11 +97,11 @@ ol {
 
 .search-form {
   display:flex;
-  align-items: center;
+/*  align-items: center;*/
   width: 100%;
   margin-top: 14px;
   justify-content: space-between;
-  height:54px;
+ /* height:54px;*/
 }
 
 .search-form__fieldset:nth-child(2){
@@ -105,7 +113,8 @@ ol {
   font-weight: 400;
   font-size: 18px;
   color:#fff;
-  width: 225px;
+ /* width: 225px;*/
+ margin-bottom: 5px;
 }
 
 .title {
@@ -294,51 +303,36 @@ ol {
   outline-offset: 1px;
 }
 
+/***********************************/
+
+.content__card-link {
+  display: block;
+}
+
 /*выделение первой или активной карты */
 .content__card-link_current article {
   background-color: #545050;
 }
 
-.content__card-link:hover:not(:active) p {
+.content__card-link:hover h2 {
   text-decoration: underline;
 }
 
-
-/* 
-Вы написали :
-При наведении подчеркивание у заголовка не появляется. 
-Я не вижу, где нет подчеркивания, наставник не может мне ничего похожего сказать.
-
-он мне ответил так:
-Ты немного усложняешь, нужно задать стили для :active, и нужно задать стили для :hover,
- а то что они в какой-то момент пересекаются — мы нажимаем на карточку (:active) но и 
- :hover при этом работаем так как мышка над ссылкой — это не проблема и ее решать не нужно
-
- очень неудобно, что у Вас нельзя спросить ничего.
-
- немного я подправил, но не здесь и не подчеркивание
-*/
-.content__card-link:hover:not(:active) h2 {
+.content__card-link:hover p {
   text-decoration: underline;
 }
 
-.content__card-link:active:hover article {
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+  margin: 2px; 
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+/* это лишнее, получается, так как есть .content__card-link_current article 
+.content__card-link:active {
   background-color: #545050;
 }
 
-.content__card-link:focus-visible article {
-  outline: 1px solid #545050;
-  margin: 2px;
-}
-
-.button {
-  border: 1px solid #fff;
-  height: 34px;
-  cursor: pointer;
-  background-color: transparent;
-  text-align: center;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  color:#fff;
-}
